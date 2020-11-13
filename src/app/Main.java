@@ -36,7 +36,7 @@ public class Main {
         System.out.println("");
         
         
-        f1.actualizarPedido(0, arti1);
+        f1.agregarPedido(0, arti1);
         
         
         f1.mostrarFactura();

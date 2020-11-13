@@ -18,8 +18,8 @@ public class Factura {
     public double iva;
     public double total;
     
-    
-    public void agregarPedido(int canti, Articulo arti)
+    // le voy a cambiar el nombre a agregarPedido_2
+    private void agregarPedido_2(int canti, Articulo arti)
     {
         canti = Math.abs(canti);
         
@@ -41,6 +41,7 @@ public class Factura {
             total = iva + subTotal;
         }
     }
+    
     
     public void eliminarPedido(String nom)
     {
@@ -65,16 +66,17 @@ public class Factura {
         
     }
     
-    
-    public void actualizarPedido(int canti, Articulo arti)
+    // le voy a cambiar el nombre a agregarPedido
+    public void agregarPedido(int canti, Articulo arti)
     {
         canti = Math.abs(canti);
         
         eliminarPedido(arti.nom);
         
         if(canti >= 1)
-            agregarPedido(canti, arti);
+            agregarPedido_2(canti, arti);
     }
+    
     
     public void mostrarFactura()
     { 
